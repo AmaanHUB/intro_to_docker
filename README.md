@@ -68,3 +68,6 @@ docker ps
 # check all containers (stopped, exited, running etc)
 docker ps -a
 ```
+
+* How docker communicates can be explained in this image below:
+![](https://docs.docker.com/engine/images/architecture.svg)

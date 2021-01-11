@@ -86,6 +86,9 @@ docker exec -u 0 -it container_name bash
 ```
 docker run -d -p 4000:4000 docs/docker.github.into
 ```
-
+* Simple copying something to a docker container:
+```
+docker cp /path/to/file/on/host container_name:/path/in/container
+```
 * How docker communicates can be explained simply in this image below:
 ![](https://docs.docker.com/engine/images/architecture.svg)

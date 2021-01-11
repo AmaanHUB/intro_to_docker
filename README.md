@@ -19,7 +19,7 @@
 
 ### Demand And Future Of Docker
 
-### Docker API
+### Docker Commands And API
 
 * Install using the relevant package manager
 * Enable the service with:
@@ -41,11 +41,26 @@ newgrp docker
 
 * Some simple docker commands:
 ```
-# pull a simple image
+# pull an image
 docker pull <image_name>
 
 # pull and immediately run the image, will run if already downloaded
 docker run <image_name>
+
+# build an image from a Dockerfile
+docker build -t <image_name>
+
+# create a new image from a container's image
+docker commit <image_name>/container_id
+
+# start a container
+docker start container_id
+
+# stop a container
+docker stop container_id/name
+
+# remove a container
+docker rm container_id/name
 
 # check running containers
 docker ps

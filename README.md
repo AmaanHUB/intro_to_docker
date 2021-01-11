@@ -44,8 +44,14 @@ newgrp docker
 # pull an image
 docker pull <image_name>
 
+# see images that are available on host
+docker images
+
 # pull and immediately run the image, will run if already downloaded
 docker run <image_name>
+
+# with the ports (-p), the second is the port the docker container will use (.i.e. what we want to connect to), the first is what we would be using to connect to from the host
+docker run -d -p 81:80 nginx:latest
 
 # build an image from a Dockerfile
 docker build -t <image_name>
@@ -65,9 +71,16 @@ docker rm container_id/name
 # check running containers
 docker ps
 
-# check all containers (stopped, exited, running etc)
+# check all containers (stopped, exited,picture running etc)
 docker ps -a
+
+# logging into a running container with bash
+docker exec -it container_name bash
+
+# logging into a running container with bash AS ROOT
+docker exec -u 0 -it container_name bash
 ```
 
-* How docker communicates can be explained in this image below:
+
+* How docker communicates can be explained simply in this image below:
 ![](https://docs.docker.com/engine/images/architecture.svg)

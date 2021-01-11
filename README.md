@@ -50,6 +50,12 @@ docker images
 # pull and immediately run the image, will run if already downloaded
 docker run <image_name>
 
+# run an image and name the container something (not the randomised name)
+docker run <image_name> -n chicken
+
+# rename a container
+docker rename container_name new_container_name
+
 # with -p, it is localhost_port:docker_container_port
 # the -d signifies that it is running in detached mode .i.e. we get the terminal given back to us
 docker run -d -p 81:80 <image_name>

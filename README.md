@@ -50,7 +50,9 @@ docker images
 # pull and immediately run the image, will run if already downloaded
 docker run <image_name>
 
-# with the ports (-p), the second is the port the docker container will use (.i.e. what we want to connect to), the first is what we would be using to connect to from the host
+# with the ports (-p), the second is the port the docker container will use (.i.e. what we want to connect to),
+# the first is what we would be using to connect to from the host
+# the -d signifies that it is running in detached mode .i.e. we get the terminal given back to us
 docker run -d -p 81:80 nginx:latest
 
 # build an image from a Dockerfile

@@ -162,3 +162,12 @@ docker pull user_id/repo_name:tagname
 * `CMD`, execute commands within the container .e.g.
 	- ["nginx", "-g", "daemon off;"]
 	- **N.B. `;` is needed at the end of the command within the `"`**
+
+
+# Microservices
+
+* What?
+* Why?
+* When to use?
+* When not to use?
+	* Lot of resources needed to manage and maintain it

@@ -1,0 +1,14 @@
+2021-01-12T10:37:59.450757087Z  /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+2021-01-12T10:37:59.450821549Z  /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+2021-01-12T10:37:59.452170086Z  /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+2021-01-12T10:37:59.455546907Z  10-listen-on-ipv6-by-default.sh: info: IPv6 listen already enabled
+2021-01-12T10:37:59.455759313Z  /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+2021-01-12T10:37:59.458715793Z  /docker-entrypoint.sh: Configuration complete; ready for start up
+2021-01-12T10:38:07.763774769Z  172.17.0.1 - - [12/Jan/2021:10:38:07 +0000] "GET / HTTP/1.1" 200 175 "-" "curl/7.74.0" "-"
+2021-01-12T10:38:44.818713110Z  172.17.0.1 - - [12/Jan/2021:10:38:44 +0000] "GET / HTTP/1.1" 200 175 "-" "curl/7.74.0" "-"
+2021-01-12T11:21:34.809123520Z  /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+2021-01-12T11:21:34.809141340Z  /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+2021-01-12T11:21:34.810341385Z  /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+2021-01-12T11:21:34.813108268Z  10-listen-on-ipv6-by-default.sh: info: IPv6 listen already enabled
+2021-01-12T11:21:34.813214909Z  /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+2021-01-12T11:21:34.816051474Z  /docker-entrypoint.sh: Configuration complete; ready for start up

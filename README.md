@@ -144,4 +144,20 @@ docker rmi <image_name>
 docker pull user_id/repo_name:tagname
 ```
 
+## Building An Image With Dockerfile (Automation)
 
+* One needs to create a `Dockerfile`:
+	* Automates the tasks that one would normally do within the container .e.g.
+		- `apt update -y`
+		- Install vim
+		- etc
+	* Wraps up all the dependencies and instructs the execution of some commands
+
+### Syntax And Keywords In A Dockerfile
+
+* `FROM` is used to tell docker which base image to use to build our image .e.g. nginx
+* `LABEL MAINTAINER=<creator_email>`
+* `COPY` used to copy files/directories from host to container
+* `EXPOSE` to tell which ports to use (same as `-p 81:80` in `docker run`)
+* `CMD`, execute commands within the container .e.g.
+	- ["nginx", "-g", "daemon off"]

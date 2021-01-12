@@ -160,4 +160,5 @@ docker pull user_id/repo_name:tagname
 * `COPY` used to copy files/directories from host to container
 * `EXPOSE` to tell which ports to use (same as `-p 81:80` in `docker run`)
 * `CMD`, execute commands within the container .e.g.
-	- ["nginx", "-g", "daemon off"]
+	- ["nginx", "-g", "daemon off;"]
+	- **N.B. `;` is needed at the end of the command within the `"`**

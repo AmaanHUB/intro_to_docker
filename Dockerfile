@@ -11,4 +11,4 @@ COPY index.html /usr/share/nginx/html/
 EXPOSE 80
 
 # will run this command once all other instructions are done
-CMD ["nginx", "-g", "daemon off"]
+CMD ["nginx", "-g", "daemon off;"]

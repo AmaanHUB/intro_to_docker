@@ -98,3 +98,29 @@ docker cp /path/to/file/on/host container_name:/path/in/container
 ```
 * How docker communicates can be explained simply in this image below:
 ![](https://docs.docker.com/engine/images/architecture.svg)
+
+## DockerHUB
+
+* Commiting a docker container to an image:
+```
+docker commit container_id docker_user_id/repo_name
+```
+
+* Pushing to a DockerHub repo:
+	* The tag name can be anything, but without the tagname, defaults to the `latest`
+```
+docker push user_id/repo_name:tagname
+```
+
+* Removing the local image to ensure when we pull from dockerhub, it is the most recent:
+```
+# may need -f at the end
+docker rmi <image_name>
+```
+
+* Pulling from DockerHub repo:
+	* Then run as normal
+```
+# tagname is optional, defaults to latest
+docker pull user_id/repo_name:tagname
+```

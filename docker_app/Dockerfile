@@ -11,9 +11,10 @@ COPY app/ /
 EXPOSE 3000
 
 
-# set the work directory
+# set the work directory, need to double check this bit and see if there is a fix
 WORKDIR /app
-# run the relevant commands
+
+# run the commands that will set up the app
 
 # update the package cache
 CMD ["apk", "update", "-y;"]
@@ -21,8 +22,8 @@ CMD ["apk", "update", "-y;"]
 # install npm for installing dependencies
 CMD ["apk", "add", "npm;"]
 
-# install the app
-CMD ["npm", "install;"]
+# install the app, have to specify the directory for some reason
+CMD ["npm", "install", "/app/;"]
 
-# run the app
-CMD ["npm", "start;"]
+# run the app, have to specify the directory for some reason
+CMD ["npm", "start", "/app/;"]

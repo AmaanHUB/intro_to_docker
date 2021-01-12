@@ -99,7 +99,26 @@ docker cp /path/to/file/on/host container_name:/path/in/container
 * How docker communicates can be explained simply in this image below:
 ![](https://docs.docker.com/engine/images/architecture.svg)
 
-## DockerHUB
+* Logging and history:
+```
+# check docker container logs
+docker logs <container_id>
+
+# check commit history of image
+docker history <image_id>
+```
+
+## DockerHub
+
+* Before committing or pushing to DockerHub, you need to login within the terminal with:
+```
+docker login
+# add details
+
+# if the above does not work, do
+docker logout
+docker login
+```
 
 * Commiting a docker container to an image:
 ```
@@ -124,3 +143,5 @@ docker rmi <image_name>
 # tagname is optional, defaults to latest
 docker pull user_id/repo_name:tagname
 ```
+
+

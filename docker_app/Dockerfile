@@ -5,7 +5,7 @@ FROM node:current-alpine3.10
 LABEL maintainer=ahashmi-ubhi@spartaglobal.com
 
 # copy the app folder from the localhost to the container
-COPY ../app/ /
+COPY app/ /
 
 # expose port 3000, since the app uses this
 EXPOSE 3000

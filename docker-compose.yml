@@ -4,10 +4,14 @@ services:
       context: ./app_docker/
     ports:
       - "80:3000"
+        #     environment:
+        #       DB_HOST: db:27017
     depends_on:
       - db
+    container_name: app
   db:
     build:
       context: ./db_docker/
     ports:
       - "27017:27017"
+    container_name: db

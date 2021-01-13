@@ -1,4 +1,4 @@
-FROM mongo:bionic
+FROM mongo:bionic as db
 
 # maintainer
 LABEL maintainer=ahashmi-ubhi@spartaglobal.com

@@ -172,7 +172,16 @@ docker build -t <chosen_name_of_image> .
 # Microservices
 
 * What?
+	* Split application into a set of a smaller, inter-connected services
 * Why?
+	* Highly maintainable
+	* Loosely coupled
+	* Independently deployable
+	* Organised around business capabilities
+	* Owned by small teams
 * When to use?
 * When not to use?
-	* Lot of resources needed to manage and maintain it
+	* Lot of resources needed to manage and maintain it, so small projects likely do not need it
+		* Should use Monolithic architecture (everything is in a stack, see picture below)
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Francher.com%2Fimg%2Fblog%2F2019%2Fmicroservices-vs-monolithic-architectures%2Fmicroservices-and-monolithic-architectures.jpg&f=1&nofb=1)

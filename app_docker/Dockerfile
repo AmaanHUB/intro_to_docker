@@ -22,8 +22,10 @@ WORKDIR /usr/src/app/
 EXPOSE 3000
 
 # install the app, have to specify the directory for some reason
-CMD ["npm", "install", "/usr/src/app/;"]
+# CMD ["npm", "install", "/usr/src/app/;"]
+RUN npm install; nodejs seeds/seed.js
 # seeds
-CMD ["npm", "run", "/usr/src/app/seeds/seed.js;"]
+# CMD ["nodejs", "/usr/src/app/seeds/seed.js;"]
 # run the app, have to specify the directory for some reason
 CMD ["npm", "start", "/usr/src/app/;"]
+

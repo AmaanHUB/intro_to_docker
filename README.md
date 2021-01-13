@@ -163,6 +163,11 @@ docker pull user_id/repo_name:tagname
 	- ["nginx", "-g", "daemon off;"]
 	- **N.B. `;` is needed at the end of the command within the `"`**
 
+* Running the Dockerfile:
+```
+# . refers to Dockerfile in directory
+docker build -t <chosen_name_of_image> .
+```
 
 # Microservices
 

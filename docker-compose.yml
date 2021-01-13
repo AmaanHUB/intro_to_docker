@@ -1,0 +1,7 @@
+services:
+  app:
+    build: ./app_docker/Dockerfile
+    ports:
+      - "80:3000"
+  db:
+

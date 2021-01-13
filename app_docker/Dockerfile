@@ -2,26 +2,28 @@
 FROM node:alpine as app
 # maintainer
 LABEL maintainer=ahashmi-ubhi@spartaglobal.com
-# copy the app folder from the localhost to the container
-COPY ./app /
 # set the work directory, need to double check this bit and see if there is a fix
-WORKDIR /app/
+WORKDIR /usr/src/app
+# copy the app folder from the localhost to the container
+COPY ./app/ .
 # update the package cache
 CMD ["apk", "update", "-y;"]
 
-# install the app, have to specify the directory for some reason
-CMD ["npm", "install", "/app/;"]
 
 
 # creating a multi-stage layer, in theory would create a smaller image, but since mine is already small it is fine, the first stage is for testing, this stage is for compressing
 FROM node:alpine
 
-COPY --from=app /app /
+COPY --from=app /usr/src/app/ /usr/src/app
 
-WORKDIR /app/
+WORKDIR /usr/src/app/
 
 # expose port 3000, since the app uses this
 EXPOSE 3000
 
+# install the app, have to specify the directory for some reason
+CMD ["npm", "install", "/usr/src/app/;"]
+# seeds
+CMD ["npm", "run", "/usr/src/app/seeds/seed.js;"]
 # run the app, have to specify the directory for some reason
-CMD ["npm", "start", "/app/;"]
+CMD ["npm", "start", "/usr/src/app/;"]

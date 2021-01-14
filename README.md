@@ -144,6 +144,14 @@ docker rmi <image_name>
 docker pull user_id/repo_name:tagname
 ```
 
+### Volumes In Docker
+
+* Can be used for persistent data and sharing across containers
+* Usually chosen at creation of container .e.g.
+```
+docker run --name=<name> -d -v path_of_host:/something/in/container -p <port>:<port> <image>
+```
+
 ## Building An Image With Dockerfile (Automation)
 
 * One needs to create a `Dockerfile`:
